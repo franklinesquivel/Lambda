@@ -1,20 +1,9 @@
+<?php
+  require_once('php/Person.php');
+?>
+
 <!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -46,22 +35,16 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    
+    <script src="js/materialize.js"></script>
+    
+    <script src="js/init.js"></script>
+    <script src="js/income.js"></script>
   </head>
   <body class="mdl-demo">
     <nav class="color-primary">
@@ -76,14 +59,47 @@
       <a href="/Lambda/Income.php" class="layout__tab is-active">Ingresos</a>
       <a href="/Lambda/Report.php" class="layout__tab">Reporte [Ingresos VS Gastos]</a>
       <a href="/Lambda/Convertion.php" class="layout__tab">Conversión de Ingresos</a>
-      <button class="btn-floating btn-large waves-effect waves-light red" id="add">
+      <button class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#mdlRegister" id="add">
         <i class="material-icons" role="presentation">add</i>
         <span class="visuallyhidden">Add</span>
       </button>
     </div>
     <div class="container">
       <main class="mdl-layout__content">
+
       </main>
+
+      <div id="mdlRegister" class="modal">
+        <div class="modal-content">
+          <h4 class="center">Añadir Ingreso</h4>
+          <form name="frmIncome" class="row">
+            <div class="input-field col s10 m6 l6 offset-s1 offset-m3 offset-l3">
+              <label for="txtDate">Fecha</label><br>
+              <input type="date" name="txtDate" id="txtDate">
+            </div>
+
+            <div class="input-field col s10 m6 l6 offset-s1 offset-m3 offset-l3">
+              <input type="text" name="txtType" id="txtType">
+              <label for="txtType">Tipo del ingreso</label>
+            </div>
+
+            <div class="input-field col s10 m6 l6 offset-s1 offset-m3 offset-l3">
+              <textarea id="txtDesc" class="materialize-textarea"></textarea>
+              <label for="txtDesc">Descripción</label>
+            </div>
+
+            <div class="input-field col s10 m6 l6 offset-s1 offset-m3 offset-l3">
+              <input type="number" name="txtAmount" id="txtAmount">
+              <label for="txtAmount">Monto</label>
+            </div>
+
+            <div class="input-field col s10 m6 l6 offset-s1 offset-m3 offset-l3">
+              <center><div class="btn btnSend">Añadir</div></center>
+            </div>
+          </form>
+        </div>
+      </div>
+
     </div>
     <footer class="page-footer">
       <div class="row">
