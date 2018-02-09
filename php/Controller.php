@@ -56,5 +56,14 @@
 
 	if(isset($_POST['tblExpenses'])){ //Solicita la tabla de gastos
 		echo printTblExpenses();
-	}
+    }
+    
+    if(isset($_POST['getReportData'])) {
+        $data = ["table" => getReportTable(), "data" => getChartData()];
+        echo json_encode($data);
+    }
+
+    if(isset($_POST['getConvertions'])) {
+        echo getConvertions();
+    }
 ?>

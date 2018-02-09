@@ -1,3 +1,7 @@
+<?php
+  require_once('php/Person.php');
+?>
+
 <!doctype html>
 <!--
   Material Design Lite
@@ -49,19 +53,14 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
+    <script src="js/materialize.js"></script>
+    
+    <script src="js/init.js"></script>
+    <script src="js/chart.bundle.min.js"></script>
+    <script src="js/report.js"></script>
+    
   </head>
   <body class="mdl-demo">
     <nav class="color-primary">
@@ -76,13 +75,17 @@
       <a href="/Lambda/Income.php" class="layout__tab">Ingresos</a>
       <a href="/Lambda/Report.php" class="layout__tab is-active">Reporte [Ingresos VS Gastos]</a>
       <a href="/Lambda/Convertion.php" class="layout__tab">Conversión de Ingresos</a>
-      <button class="btn-floating btn-large waves-effect waves-light red" id="add">
-        <i class="material-icons" role="presentation">add</i>
-        <span class="visuallyhidden">Add</span>
-      </button>
     </div>
     <div class="container">
       <main class="mdl-layout__content">
+        <br><br>
+        <h3 class='center deep-purple-text'>Tabla Comparativa</h3><br>
+        <div class="tblCont"></div>
+
+        <br>
+        <h3 class='center deep-purple-text'>Gráfico</h3><br>
+        <canvas id="reportChart" width="100" height="100"></canvas>
+        <br><br>
       </main>
     </div>
   </body>
