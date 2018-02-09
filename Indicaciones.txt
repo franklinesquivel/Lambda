@@ -1,4 +1,5 @@
-// Descripción general de la prueba: Realizar una página web que simule un sistema de finanzas
+// Descripción general de la prueba: 
+// Realizar una página web que simule un sistema de finanzas
 // en el cual se permita registrar los gastos diarios de una persona (nombre, apellido) y los ingresos que recibe
 // 
 // Registrarlos con fecha, tipo de gasto, descripción y monto. Los mismos literales para el registro de un
