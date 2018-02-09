@@ -1,6 +1,8 @@
 <?php
 
     require_once('Person.php');
+    require_once 'mpdf60/mpdf.php';
+    $mpfd = new mPDF('utf-8', 'A4', 0, '', 5, 5, 0, 0, 0, 0, 'P');
 
     if(isset($_POST['initIncome'])) {
         if(count($_SESSION['user']['income']) > 0) {
@@ -56,5 +58,14 @@
 
 	if(isset($_POST['tblExpenses'])){ //Solicita la tabla de gastos
 		echo printTblExpenses();
-	}
+    }
+    
+    if(isset($_POST['printPDF'])){ //Muestra pdf
+    }
+
+    if(isset($_POST['registerUser'])){ //Se ingresa la información del usuario
+        setData($_POST['name'], $_POST['lastName']);
+        echo "Usuario ingresado exitosamente!";
+    }
+
 ?>

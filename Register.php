@@ -51,6 +51,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="js/registerUser.js"></script>
     <style>
     #view-source {
       position: fixed;
@@ -83,105 +84,22 @@
     </div>
     <div class="container">
       <main class="mdl-layout__content">
-        <div class="mdl-layout__tab-panel is-active" id="overview">
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="card">
-              <div class="row">
-                <div class="col s4">
-                  <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-                    <i class="material-icons">play_circle_filled</i>
-                  </header>
-                </div>
-                <div class="col s8">
-                  <div class="card-content">                  
-                    <h4 class="card-title">Features<i class="material-icons right">more_vert</i></h4>
-                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
-                  </div>
-                  <div class="card-action">
-                    <a href="#" class="mdl-button">Read our features</a>
-                  </div>
-                </div>              
+        <br>
+        <div class="row">
+          <h4 class="center">Registro de Usuario</h4>
+          <form action="" class="col l6 offset-l3" id="frmRegisterUser" name="frmRegisterUser">
+            <div class="row input-field">
+                <input id="txtName" type="text">
+                <label for="txtName">Nombre</label>
               </div>
-            </div>                
-          </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="row">
-              <div class="col">
-              <div class="card">
-                <div class="card-content">
-                  <h4 class="card-title">Details<i class="material-icons right">more_vert</i></h4>
-                  <div class="row">
-                    <div class="col s2 section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                      <div class="section__circle-container__circle color-primary--dark"></div>
-                    </div>
-                    <div class="col s10 section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                      <h5>Lorem ipsum dolor sit amet</h5>
-                      Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                    </div>                  
-                  </div>
-                  <div class="row">
-                    <div class="col s2 section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                      <div class="section__circle-container__circle color-primary--dark"></div>
-                    </div>
-                    <div class="col s10 section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                      <h5>Lorem ipsum dolor sit amet</h5>
-                      Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                    </div>                    
-                  </div>
-                  <div class="row">
-                    <div class="col s2 section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                      <div class="section__circle-container__circle color-primary--dark"></div>
-                    </div>
-                    <div class="col s10 section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                      <h5>Lorem ipsum dolor sit amet</h5>
-                      Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                    </div>                  
-                  </div>
-                </div>
-                <div class="card-action">
-                  <a href="#" class="mdl-button">Read our features</a>
-                </div>
-              </div>                
+              <div class="row input-field">
+                <input id="txtLastName" type="text">
+                <label for="txtLastName">Apellidos</label>
               </div>
-            </div>
-          </section>
-          <section class="section--center">
-            <div class="row">
-              <div class="col">
-                <div class="card">
-                  <div class="card-content">
-                    <h4 class="card-title">Technology<i class="material-icons right">more_vert</i></h4>
-                    <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#" class="mdl-button">Read our features</a>
-                  </div>
-                </div>
+              <div class="row input-field center-align">
+                <button id="btnRegister" class="waves-effect waves-light btn">Registrar</button>
               </div>
-            </div>
-          </section>
-          <section class="section--footer mdl-color--white mdl-grid">
-            <div class="row">
-              <div class="col s12 m6 testimonials">
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle color-secondary section__circle--big"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-                </div>
-              </div>
-              <div class="col s12 m6 testimonials">
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle color-secondary section__circle--big"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-                </div>                
-              </div>
-            </div>
-          </section>
+          </form>
         </div>
       </main>
     </div>

@@ -1,0 +1,67 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: DejaVuSansCondensed;
+}
+
+.logo_cont h2{
+    margin-top: -55px;
+    margin-left: 110px;
+}
+
+.logo{
+    height: 90px;
+}
+
+.PDF_header .title{
+    position: relative;
+}
+
+.PDF_header .title h3 {
+    text-align: center;
+    position: relative;
+}
+
+table {
+	font-family: DejaVuSansCondensed;
+	border-collapse: collapse;
+	vertical-align: middle;
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
+	vertical-align: center;
+	text-align: center;
+	font-size: 14px;
+	padding: 5px;
+	vertical-align: middle;
+	background-color: rgb(103,58,183);
+    color: #fff;
+    border: 1px solid rgb(103,58,183);
+}
+
+td{
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 4px;
+    border: 1px solid rgb(103,58,183);
+}
+
+h3.table{
+    text-align: center;
+}
+
+div.img{
+    width: 100%;
+    margin-left: 12.5%;
+}
+
+.chart{
+    width: 100%;
+}

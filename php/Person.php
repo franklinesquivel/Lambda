@@ -17,7 +17,8 @@
     }
 
     function setData($name, $lastName){
-
+        $_SESSION['user']['name'] = $name;
+        $_SESSION['user']['lastName'] = $lastName;
     }
 
     // echo var_dump($_SESSION['user']['income']);
@@ -71,5 +72,9 @@
         }
 
         return $tbl;
+    }
+
+    function printPDF(){
+        
     }
 ?>
