@@ -39,4 +39,22 @@
         addIncome($_POST['data']);
     }
 
+    if(isset($_POST['expenses'])){ //Código que se ejecuta al enviar el formulario de registro de datos
+		$data = 
+		[
+			"date" => $_POST['date'],
+			"type" => $_POST['type'],
+			"description" => $_POST['description'],
+			"amount" => $_POST['amount']
+		];
+		if(addExpenses($data)){
+			echo "Gasto agregado";
+		}else{
+			echo "Ha ocurrido un error";
+		}
+	}
+
+	if(isset($_POST['tblExpenses'])){ //Solicita la tabla de gastos
+		echo printTblExpenses();
+	}
 ?>

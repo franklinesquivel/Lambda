@@ -25,4 +25,51 @@
     function addIncome($data){
         array_push($_SESSION['user']['income'], $data);
     }
+
+    function addExpenses($data){
+        if(array_push($_SESSION['user']['expenses'], $data)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function printTblExpenses(){ //Tabla de gastos
+        $tbl = "";
+        if(count($_SESSION['user']['expenses']) > 0){
+            $tbody = "";
+            foreach($_SESSION['user']['expenses'] as $valor){
+                $tbody .=
+                "
+                    <tr>
+                        <td>".$valor["date"]."</td>
+                        <td>".$valor["type"]."</td>
+                        <td>".$valor["type"]."</td>
+                        <td>".$valor["description"]."</td>
+                    </tr>
+                ";
+            }
+
+            $tbl = 
+            "
+                <table class='centered bordered'>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Monto ($)</th>
+                            <th>Tipo de Gasto</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        $tbody
+                    </tbody>
+                </table>
+            ";
+        }else{
+            $tbl = "<h2 class='center red-text'>No existen registros de egresos!</h2>";
+        }
+
+        return $tbl;
+    }
 ?>
