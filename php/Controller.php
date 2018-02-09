@@ -7,7 +7,7 @@
             $c = 0;
             $aux = "<br><br><br><br>
             <table class='centered bordered'>
-                <head>
+                <thead>
                     <th>N°</th>
                     <th>Fecha</th>
                     <th>Tipo</th>
@@ -18,7 +18,7 @@
             foreach($_SESSION['user']['income'] as $exp){
                 $aux .= "
                     <tr>
-                        <td>" . $c++ . "</td>
+                        <td>" . ++$c . "</td>
                         <td>" . $exp['date'] . "</td>
                         <td>" . $exp['type'] . "</td>
                         <td>" . $exp['description'] . "</td>

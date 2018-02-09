@@ -85,54 +85,5 @@
       <main class="mdl-layout__content">
       </main>
     </div>
-    <footer class="page-footer">
-      <div class="row">
-        <div class="col s3">
-          <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-          <h6 class="mdl-mega-footer--heading">Features</h6>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">Updates</a></li>
-          </ul>
-        </div>
-        <div class="col s3">
-          <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-          <h6 class="mdl-mega-footer--heading">Details</h6>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="#">Spec</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">Resources</a></li>
-          </ul>
-        </div>
-        <div class="col s3">
-          <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-          <h6 class="mdl-mega-footer--heading">Technology</h6>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Patterns</a></li>
-            <li><a href="#">Usage</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contracts</a></li>
-          </ul>
-        </div>
-        <div class="col s3">
-          <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-          <h6 class="mdl-mega-footer--heading">FAQ</h6>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="#">Questions</a></li>
-            <li><a href="#">Answers</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

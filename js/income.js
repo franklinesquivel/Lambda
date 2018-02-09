@@ -6,13 +6,23 @@
             type: 'POST',
             data: {initIncome: true},
             success: function(r) {
-                $('main').html(r);
+                if(Number(r) == -1){
+                    $('main').html(`
+                        <br><br><br>
+                        <h2 class='center red-text'>No existen registros de ingresos!</h2>
+                        <br><br><br>
+                    `);
+                }else{
+                    $('main').html(r);
+                }
             }
         })
     }
     
     $(document).ready(function(){
         initPage();
+
+        frmIncome.onsubmit = function(){return false;}
 
         $('.btnSend').click(function(){
             $.ajax({
@@ -25,7 +35,8 @@
                     amount: frmIncome.txtAmount.value,
                 }},
                 success: function(r){
-                    $('#mdlIncome').modal('close');
+                    Materialize.toast('El ingreso ha sido añadido éxitosamente!', 2000);
+                    $('#mdlRegister').modal('close');
                     frmIncome.reset();
                     initPage();
                 }
