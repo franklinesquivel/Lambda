@@ -21,6 +21,7 @@
     function setData($name, $lastName){
         $_SESSION['user']['name'] = $name;
         $_SESSION['user']['lastName'] = $lastName;
+        $_SESSION['user']['logged'] = true;
     }
 
     function addIncome($data){
