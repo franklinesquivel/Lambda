@@ -44,10 +44,6 @@ $(document).ready(function () {
         });
     }
 
-    $("#btnModalAdd").on('click', function () {
-        $("#mdlRegister").modal('open');
-    });
-
     function initPage() {
         $.ajax({
             type: 'POST',

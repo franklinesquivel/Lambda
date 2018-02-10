@@ -75,7 +75,7 @@
       <a href="/Lambda/Income.php" class="layout__tab">Ingresos</a>
       <a href="/Lambda/Report.php" class="layout__tab">Reporte [Ingresos VS Gastos]</a>
       <a href="/Lambda/Convertion.php" class="layout__tab">Conversión de Ingresos</a>
-      <button class="btn-floating btn-large waves-effect waves-light red" id="add">
+      <button class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#mdlRegister" id="add">
         <i class="material-icons" role="presentation">add</i>
         <span class="visuallyhidden">Add</span>
       </button>
@@ -84,9 +84,6 @@
       <main class="mdl-layout__content">
         <br>
         <div class="row">
-          <div class="col l6 offset-l3 center-align">
-            <button id="btnModalAdd" class="waves-effect waves-light btn">Registrar Gasto</button>
-          </div>
 
           <div class="row">
             <div class="col l12" id="tblExpenses">
