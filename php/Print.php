@@ -105,7 +105,7 @@
             //Se muestra la gráfica
             $form .= "
                 <br><h3 class='table'>Gráfico</h3>
-                <div class='img'><img class='chart' src='image.png'></img></div>
+                <div class='img'><img src='../images/tmp/image.png'></div>
             ";
         // }else{
         //     $form = "<";

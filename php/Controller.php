@@ -1,8 +1,6 @@
 <?php
 
     require_once('Person.php');
-    require_once 'mpdf60/mpdf.php';
-    $mpfd = new mPDF('utf-8', 'A4', 0, '', 5, 5, 0, 0, 0, 0, 'P');
 
     if(isset($_POST['initIncome'])) {
         if(count($_SESSION['user']['income']) > 0) {
@@ -60,7 +58,13 @@
 		echo printTblExpenses();
     }
     
-    if(isset($_POST['printPDF'])){ //Muestra pdf
+    if(isset($_POST['saveImage'])){ //Gaurdamos imagen
+        $img = $_POST['chart'];
+        $img = str_replace('data:image/png;base64,', '', $img);
+        $img = str_replace(' ', '+', $img);
+        $data = base64_decode($img);
+        $file = '../images/tmp/image.png';
+        $success = file_put_contents($file, $data);
     }
 
     if(isset($_POST['registerUser'])){ //Se ingresa la información del usuario
@@ -68,4 +72,12 @@
         echo "Usuario ingresado exitosamente!";
     }
 
+    if(isset($_POST['getReportData'])) {
+        $data = ["table" => getReportTable(), "data" => getChartData()];
+        echo json_encode($data);
+    }
+
+    if(isset($_POST['getConvertions'])) {
+        echo getConvertions();
+    }
 ?>

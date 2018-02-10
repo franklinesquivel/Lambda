@@ -58,10 +58,14 @@ h3.table{
 }
 
 div.img{
-    width: 100%;
-    margin-left: 12.5%;
+	width: 50%;
+	margin-left: 25%;
 }
 
-.chart{
-    width: 100%;
+div.img img{
+	height: 500px;
 }
+
+/* .chart{
+    width: 100%;
+} */
