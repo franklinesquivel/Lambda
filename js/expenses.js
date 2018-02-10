@@ -45,7 +45,6 @@ $(document).ready(function () {
     }
 
     $("#btnModalAdd").on('click', function () {
-        console.log("Abrir modal");
         $("#mdlRegister").modal('open');
     });
 

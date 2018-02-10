@@ -51,17 +51,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
   </head>
   <body class="mdl-demo">
     <nav class="color-primary">
@@ -76,10 +65,6 @@
       <a href="/Lambda/Income.php" class="layout__tab">Ingresos</a>
       <a href="/Lambda/Report.php" class="layout__tab">Reporte [Ingresos VS Gastos]</a>
       <a href="/Lambda/Convertion.php" class="layout__tab">Conversión de Ingresos</a>
-      <button class="btn-floating btn-large waves-effect waves-light red" id="add">
-        <i class="material-icons" role="presentation">add</i>
-        <span class="visuallyhidden">Add</span>
-      </button>
     </div>
     <div class="container">
       <main class="mdl-layout__content">

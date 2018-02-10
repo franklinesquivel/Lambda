@@ -1,3 +1,8 @@
+<?php
+  require_once('php/Person.php');
+  checkSession();
+?>
+
 <!doctype html>
 <!--
   Material Design Lite
@@ -92,7 +97,7 @@
         </div>
       </main>
       <div id="mdlRegister" class="modal">
-        <div class="modal-content conatiner">
+        <div class="modal-content container">
           <div class="row">
             <h4 class="center">Registro de gastos</h4>
           </div>

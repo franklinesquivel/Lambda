@@ -1,6 +1,8 @@
 <?php
   require_once('php/Person.php');
+  checkSession();
 ?>
+
 
 <!doctype html>
 <!--

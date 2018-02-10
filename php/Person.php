@@ -12,16 +12,16 @@
         }
     }
 
-    if($_SESSION['user']['logged'] == false && $_SERVER['REQUEST_URI'] != "/Lambda/Register.php") {
-        // header("Location: /Lambda/Register.php");
+    function checkSession() {
+        if($_SESSION['user']['logged'] == false && $_SERVER['REQUEST_URI'] != "/Lambda/Register.php") {
+            header("Location: /Lambda/Register.php");
+        }
     }
 
     function setData($name, $lastName){
         $_SESSION['user']['name'] = $name;
         $_SESSION['user']['lastName'] = $lastName;
     }
-
-    // echo var_dump($_SESSION['user']['income']);
 
     function addIncome($data){
         array_push($_SESSION['user']['income'], $data);
